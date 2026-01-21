@@ -116,11 +116,11 @@ if [ $PCAP_MODE -ne 0 ]; then
     PID_LIST+=($SUDO_TCPDUMP_PID $TCPDUMP_PID)
 fi
 
-sudo -E ./bin/upf -c ./config/upfcfg.yaml -l ${LOG_PATH}${LOG_NAME} &
-SUDO_UPF_PID=$!
-sleep 0.1
-UPF_PID=$(pgrep -P $SUDO_UPF_PID)
-PID_LIST+=($SUDO_UPF_PID $UPF_PID)
+# sudo -E ./bin/upf -c ./config/upfcfg.yaml -l ${LOG_PATH}${LOG_NAME} &
+# SUDO_UPF_PID=$!
+# sleep 0.1
+# UPF_PID=$(pgrep -P $SUDO_UPF_PID)
+# PID_LIST+=($SUDO_UPF_PID $UPF_PID)
 
 DB_NAME="free5gc"
 DB_DROP_COLLECTION=(
